@@ -3,6 +3,23 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#b09054",
+          secondary: "#b4a897",
+          accent: "#3ca68d",
+          neutral: "#d8d2ca",
+          "base-100": "#fbfbfe",
+          info: "#00aeff",
+          success: "#009257",
+          warning: "#ffa400",
+          error: "#C1360F",
+        },
+      },
+    ],
+  },
   content: ["./components/**/*.{js,ts,jsx,tsx}", "./app/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   safelist: ["dark", "light"],
@@ -264,5 +281,5 @@ module.exports = {
   variants: {
     extend: { typography: ["tint", "dark", "primary"] },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };

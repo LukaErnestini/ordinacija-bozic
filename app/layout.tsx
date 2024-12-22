@@ -46,7 +46,8 @@ export default async function RootLayout({
 
   return (
     <html
-      lang="en"
+      data-theme="mytheme"
+      lang="sl"
       suppressHydrationWarning
       className={`${montserrat.variable} ${playfairDisplay.variable}`}
     >
